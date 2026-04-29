@@ -1,0 +1,96 @@
+var mode = 0;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  splash = new Splash();
+}
+
+function draw() {
+  if (mouseIsPressed == true && splash.update() == true) {
+    mode = 1;
+  }
+  
+  if (mode == 1) {
+    splash.hide();
+    
+ let ripples = []; 
+let mic;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noFill(); 
+  
+
+  mic = new p5.AudioIn();
+  mic.start();
+}
+
+function draw() {
+  background(10, 20, 40); 
+
+  let vol = mic.getLevel();
+
+  if (vol > 0.1) {
+    let r = new Ripple(random(width), random(height));
+    ripples.push(r);
+  }
+
+
+  for (let i = ripples.length - 1; i >= 0; i--) {
+    ripples[i].update();
+    ripples[i].display();
+
+    if (ripples[i].isDead()) {
+      ripples.splice(i, 1);
+    }
+  }
+
+
+  fill(255);
+  noStroke();
+
+}
+
+
+function mousePressed() {
+  userStartAudio();
+  
+
+  let r = new Ripple(mouseX, mouseY);
+  ripples.push(r);
+}
+
+class Ripple {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.r = 0;   
+    this.transparency = 255;   
+    this.growth = 2;
+    this.red = random(100, 255);
+    this.blue = random(100, 255);
+    this.green = random(100, 255);
+  }
+
+  update() {
+    this.r += this.growth; 
+    this.transparency -= 3;     
+  }
+
+  display() {
+    noFill()
+    stroke(this.red, this.green, this.blue, this.transparency); 
+    strokeWeight(2);
+    ellipse(this.x, this.y, this.r);
+  }
+
+  isDead() {
+    return this.transparency <= 0;
+  }
+}
+    
+    
+  }
+}
+
+
