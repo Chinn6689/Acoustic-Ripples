@@ -3,14 +3,13 @@ let ripples = [];
 let mic;
 let splash;
 let mySlider;
-let sensitivity = 0.02; // 1. 直接在這裡設定固定靈敏度 (數值越小越靈敏)
+let sensitivity = 0.02;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
   splash = new Splash();
   
-  // 2. 依然保留滑桿初始化，但我們不再叫它 show()，它就不會出現
   mySlider = createSlider(0, 1, 0.1, 0.01);
   mySlider.hide(); 
 
@@ -32,11 +31,8 @@ function draw() {
   else if (mode === 1) {
     background(10, 20, 40);
     
-    // 這裡我們拿掉了 mySlider.show()，所以滑桿會消失
-    
     let vol = mic.getLevel();
 
-    // 3. 使用固定的 myThreshold 來偵測聲音
     if (vol > sensitivity) {
       ripples.push(new Ripple(random(width), random(height)));
     }
@@ -49,8 +45,6 @@ function draw() {
       }
     }
 
-    // 4. 這裡原本顯示 Volume 和 Sensitivity 的 text() 已經被我刪除了
-    // 現在畫面會保持全黑，只有波紋出現
   }
 }
 
