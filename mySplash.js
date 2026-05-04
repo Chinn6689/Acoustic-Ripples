@@ -12,8 +12,7 @@ class Splash {
     this.name = createDiv("Chin Tung");
     this.name.position(this.splashBorder + 20, this.splashBorder + 60);
 
-
-   this.info = createDiv("You can read a bunch of stuff about my project here because I've been working very hard in this class and I have so much to say about my project, the way it works, and why I made it. <p> I could go on and on and on. <p> <a href='https://github.com/chinn6689/Acoustic-Ripples' target='_blank'>view code</a>");;
+    this.info = createDiv("<strong>Acoustic Ripples</strong> is an interactive audiovisual installation that transforms sound into liquid geometry. By using a microphone to capture environmental noise or playing the digital piano (keys 1-7), users can generate vibrant, pulsating ripples on a dark, meditative surface. <p> <strong>Instructions:</strong> <br> • Speak or play music to trigger ripples. <br> • Press keys 1-7 to play notes (Do-Si). <br> • Click mouse to interact. <p> <a href='https://github.com/chinn6689/Acoustic-Ripples' target='_blank'>view code</a>");
     this.info.position(this.splashBorder + 20, this.splashBorder + 100);
     this.info.size(windowWidth - this.splashBorder * 2 - 50, windowHeight - this.splashBorder * 2 - 50);
   }
