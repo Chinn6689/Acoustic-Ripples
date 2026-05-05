@@ -28,7 +28,7 @@ function setup() {
 
   env = new p5.Envelope();
   env.setADSR(0.05, 0.1, 0.5, 0.5);
-  env.setRange(0.8, 0); // 最大音量 0.8, 最小 0
+  env.setRange(0.8, 0); 
 
   osc = new p5.Oscillator('sine');
   osc.amp(env);
