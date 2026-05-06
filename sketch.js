@@ -4,7 +4,7 @@ let mic;
 let splash;
 let osc; 
 let env; 
-let myThreshold = 0.02;
+let myThreshold = 0.01;
 
 
 let notes = {
