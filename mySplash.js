@@ -12,7 +12,7 @@ class Splash {
     this.name = createDiv("Chin Tung");
     this.name.position(this.splashBorder + 20, this.splashBorder + 60);
 
-    this.info = createDiv("Acoustic Ripples is an interactive audiovisual installation that transforms sound into liquid geometry. By using a microphone to capture environmental noise or playing the digital piano through keys 1 to 7, you can generate vibrant, pulsating ripples on a dark and meditative surface. This project explores the boundary between the invisible nature of sound and the fluid elegance of water, allowing you to paint with your voice, rhythm, and touch. You can speak to the screen, play your favorite music, or use the keyboard to compose your own visual melody. <p> <a href='https://github.com/chinn6689/Acoustic-Ripples' target='_blank'>view code</a>");
+    this.info = createDiv("Acoustic Ripples is an interactive audiovisual installation that transforms sound into liquid geometry. By using a microphone to capture environmental noise or playing the digital piano through keys 1 to 7, you can generate vibrant, pulsating ripples on a dark and meditative surface. This project explores the boundary between the invisible nature of sound and the fluid elegance of water, allowing you to paint with your voice, rhythm, and touch. You can speak to the screen, play your favorite music, or use the keyboard to compose your own visual melody. <p> <a href='https://editor.p5js.org/chinn6689/sketches/pJfU77LjH' target='_blank'>view code</a>");
  
     this.info.position(this.splashBorder + 20, this.splashBorder + 100);
     this.info.size(windowWidth - this.splashBorder * 2 - 50, windowHeight - this.splashBorder * 2 - 50);
